@@ -1,0 +1,5 @@
+.env.shared
+.env
+compose.yaml
+root/*
+!root/.keep

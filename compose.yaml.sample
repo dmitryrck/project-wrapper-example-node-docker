@@ -1,0 +1,39 @@
+services:
+  proj1:
+    image: node-wrapper
+    volumes:
+      - ./proj1:/app
+      - node_modules:/app/node_modules
+      - ./root:/root
+    working_dir: /app
+    env_file: .env.shared
+    ports:
+      - 3000:3000
+    command: npm start
+
+  proj2:
+    image: node-wrapper
+    volumes:
+      - ./proj2:/app
+      - node_modules:/app/node_modules
+      - ./root:/root
+    working_dir: /app
+    env_file: .env.shared
+    ports:
+      - 3001:3000
+    command: npm start
+
+  proj3:
+    image: node-wrapper
+    volumes:
+      - ./proj3:/app
+      - node_modules:/app/node_modules
+      - ./root:/root
+    working_dir: /app
+    env_file: .env.shared
+    ports:
+      - 3002:3000
+    command: npm start
+
+volumes:
+  node_modules:
